@@ -27,52 +27,6 @@ Earning app/
 |-- README.md            Repository overview
 ```
 
-## Quick start
-
-### 1. Backend setup
-
-```bash
-cd backend
-composer install
-copy .env.example .env
-```
-
-Update `backend/.env` with your database credentials and JWT secret, then import the schema from `backend/database.sql`.
-
-Run the backend on port `8000`:
-
-```bash
-php -S localhost:8000 router.php
-```
-
-On Windows, you can also use:
-
-```bash
-run-server.bat
-```
-
-### 2. Frontend setup
-
-```bash
-cd my-app
-npm install
-copy .env.example .env
-```
-
-Set:
-
-```env
-VITE_API_URL=http://localhost:8000/api
-```
-
-Then start the frontend:
-
-```bash
-npm run dev
-```
-
-The Vite dev server runs on `http://localhost:5173`.
-
 ## Main application areas
 
 - Authentication: sign up, login, token verification
