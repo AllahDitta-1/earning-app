@@ -58,7 +58,7 @@ CREATE TABLE transactions (
 
 ```bash
 # Using PHP built-in server
-php -S localhost:5000
+php -S localhost:8000 router.php
 
 # Or with Apache/Nginx, point document root to the backend folder
 ```
@@ -91,22 +91,24 @@ php -S localhost:5000
 
 Update `.env` file with your settings:
 
+These are example placeholders only. Do not put real secrets in documentation or commit them to git.
+
 ```
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=
 DB_NAME=zcash
 
-JWT_SECRET=your_super_secret_jwt_key_change_this
+JWT_SECRET=replace_with_a_long_random_secret
 
-EASYPAISA_API_KEY=your_key
-JAZZCASH_API_KEY=your_key
+EASYPAISA_API_KEY=replace_with_provider_key
+JAZZCASH_API_KEY=replace_with_provider_key
 ```
 
 ## Security Notes
 
-1. **Change JWT_SECRET** - Generate a secure secret key
-2. **Payment Gateway Keys** - Get API keys from Easypaisa & JazzCash
+1. **Change JWT_SECRET** - Generate a secure secret key and keep it only in server env files
+2. **Payment Gateway Keys** - Store provider keys on the backend only, never in frontend code
 3. **Database** - Use proper user permissions, not root
 4. **CORS** - Current setup allows all origins, restrict in production
 5. **HTTPS** - Always use HTTPS in production

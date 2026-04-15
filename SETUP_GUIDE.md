@@ -71,7 +71,7 @@ Update these values:
 
 ```bash
 # Using PHP built-in server (development only)
-php -S localhost:5000
+php -S localhost:8000 router.php
 
 # Or use Apache/Nginx - point document root to backend folder
 ```
@@ -95,7 +95,7 @@ cp .env.example .env
 Create `my-app/.env`:
 
 ```
-REACT_APP_API_URL=http://localhost:5000/api
+VITE_API_URL=http://localhost:8000/api
 ```
 
 ### 3. Run Frontend
